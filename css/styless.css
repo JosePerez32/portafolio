@@ -41,8 +41,6 @@ body {
 }
 
 .search-box {
-
-
   padding: 12px;
   border-radius: 6px;
   border: none;
@@ -266,3 +264,7 @@ footer {
   margin-top: 10px;
 }
 /* ...existing code... */
+::selection {
+  background: #ffe066;   /* Amarillo suave */
+  color: #232323;        /* Texto oscuro para contraste */
+}
