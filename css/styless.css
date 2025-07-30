@@ -41,9 +41,15 @@ body {
 }
 
 .search-box {
-  padding: 5px;
-  border-radius: 5px;
+
+
+  padding: 12px;
+  border-radius: 6px;
   border: none;
+  background: #2e2e2e;
+  color: #fff;
+  font-size: 1em;
+  resize: none;
 }
 
 .hero {
