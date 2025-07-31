@@ -38,8 +38,8 @@ sr.reveal('.portfolio-section', {
     interval: 200
 });
 sr.reveal('.contact-section', {
-  duration: 3000,       
+  duration: 5000,       
     origin: 'bottom',
-    distance: '-100px',
+    distance: '100px',
     interval: 200
 }); 
