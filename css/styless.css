@@ -92,6 +92,12 @@ body {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+.hero-section {
+  background-color: #444242;
+  padding: 60px 40px;
+  border-radius: 20px;
+  margin-top: 60px;
+}
 .hero-image img {
   max-width: 300px;
   border-radius: 15px;
@@ -268,3 +274,224 @@ footer {
   background: #ffe066;   /* Amarillo suave */
   color: #232323;        /* Texto oscuro para contraste */
 }
+/* Contenedor general alineado al lado derecho de la imagen */
+.vertical-line-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 20px;
+  position: relative;
+}
+
+/* Línea vertical con gradiente difuminado arriba */
+.vertical-line {
+  width: 2px;
+  height: 150px;
+  background: linear-gradient(to bottom, transparent, #f5c242, #f5c242);
+  margin-bottom: 15px;
+}
+
+/* Íconos sociales en vertical */
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Estilos de íconos placeholder (puedes poner íconos reales luego) */
+.icon-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  background-color: #2e2e2e;
+  color: #ffffff;
+  border-radius: 50%;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.icon-link:hover {
+  background-color: #f5c242;
+  color: #1e1e1e;
+}
+/* === Experience Section === */
+.experience-section {
+  background-color: #2a2a2a; /* gris menos opaco */
+  padding: 60px 40px;
+  margin-top: 60px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.experience-title {
+  font-size: 2rem;
+  color: #f5c242;
+  margin-bottom: 40px;
+}
+
+/* Timeline Layout */
+.timeline {
+  position: relative;
+  margin-left: 60px;
+  padding-left: 40px;
+  border-left: 2px solid #f5c24255; /* línea con opacidad */
+}
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -11px;
+  top: 5px;
+  width: 18px;
+  height: 18px;
+  background-color: #f5c242;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #f5c242, 0 0 20px #f5c24266;
+  z-index: 1;
+}
+
+.timeline-year {
+  position: absolute;
+  left: -60px;
+  top: 0;
+  font-weight: bold;
+  color: #f5c242;
+  font-size: 0.95rem;
+}
+
+.timeline-content {
+  margin-left: 20px;
+  max-width: 600px;
+}
+
+.timeline-role {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.timeline-company {
+  font-size: 1rem;
+  font-style: italic;
+  color: #c7c7c7;
+  margin-bottom: 10px;
+}
+
+.timeline-description {
+  font-size: 0.95rem;
+  color: #dddddd;
+  text-align: justify;
+  line-height: 1.6;
+}
+/* === Portfolio Section === */
+.portfolio-section {
+  background-color: #242424;
+  padding: 60px 40px;
+  border-radius: 20px;
+  margin-top: 60px;
+}
+
+.portfolio-title {
+  font-size: 2rem;
+  color: #f5c242;
+  margin-bottom: 40px;
+}
+
+/* Grid */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+/* Card styles */
+.portfolio-card {
+  perspective: 1000px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.portfolio-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Card front (image) */
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+.card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 15px;
+}
+
+/* Card back (description) */
+.card-back {
+  background-color: #333333;
+  color: #ffffff;
+  transform: rotateY(180deg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.card-back h3 {
+  margin-bottom: 10px;
+  color: #f5c242;
+  font-size: 1.2rem;
+}
+
+.card-back p {
+  font-size: 0.95rem;
+  color: #dddddd;
+}
+/* ...existing code... */
+.download-cv-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background: linear-gradient(90deg, #f5c242 60%, gold 100%);
+  color: #232323;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1em;
+  box-shadow: 0 2px 8px rgba(245, 194, 66, 0.2);
+  transition: background 0.2s, transform 0.2s;
+  margin-left: 20px;
+  cursor: pointer;
+}
+.download-cv-button:hover {
+  background: linear-gradient(90deg, gold 60%, #f5c242 100%);
+  transform: translateY(-2px) scale(1.04);
+  color: #1f1f1f;
+}
+/* ...existing code... */

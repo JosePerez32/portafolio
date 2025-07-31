@@ -25,3 +25,21 @@ sr.reveal('.about', {
     distance: '-100px',
     interval: 200
 });
+sr.reveal('.experience-section', { 
+  duration: 3000,       
+    origin: 'bottom',
+    distance: '-100px',
+    interval: 200
+}); 
+sr.reveal('.portfolio-section', {
+  duration: 3000,       
+    origin: 'bottom',
+    distance: '-100px',
+    interval: 200
+});
+sr.reveal('.contact-section', {
+  duration: 3000,       
+    origin: 'bottom',
+    distance: '-100px',
+    interval: 200
+}); 
