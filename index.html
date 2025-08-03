@@ -6,6 +6,7 @@
   <title>Hello! I'm José Pérez - Full Stack Developer.</title>
   <link rel="stylesheet" href="./css/styless.css" />
   <script src="./js/scrollreveal.js"></script>
+  <script src="./js/scrollAnimation.js"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -36,7 +37,7 @@
       <img src="./elements/photo.png" alt="Ivan Dan" />
     </div>
     <div class="vertical-line-container">
-  <div class="vertical-line"></div>
+  <div class="vertical-line" data-animate></div>
   <div class="social-icons">
     <!-- Puedes poner tus íconos aquí -->
      <a href="https://www.linkedin.com/in/jcperez0815/" class="icon-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
@@ -48,7 +49,7 @@
   </section>
 
   <section class="about">
-    <h2 class="about-title">About</h2>
+    <h2 class="about-title" data-animate>About</h2>
     <p>
       Hi! I’m José Pérez, a Software Engineer (Intelligent Systems) and Full Stack Developer with a tech journey that began at 15, when I first programmed in Turbo C on Windows 97 machines during my vocational training in Mexico. Later, I earned my degree at UAMex, one of Mexico’s top autonomous universities, where I spent five years mastering programming languages, software development tools, and the fundamentals of artificial intelligence—now a cornerstone of modern tech.
       Professionally, I’ve worked as a database administrator (DB2, MySQL), developed full-stack applications using React, JavaScript, .NET/C#, and Python, and configured infrastructure with Ubuntu Server and OpenShift. After moving to Belgium in 2017, I expanded my skills with specialized training in C# .NET and embraced collaborative development workflows with GitHub.
@@ -75,7 +76,7 @@
     </div>
   </section>
     <section class="portfolio-section" id="portfolio">
-      <h2 class="portfolio-title">Portfolio</h2>
+      <h2 class="portfolio-title" data-animate>Portfolio</h2>
 
       <div class="portfolio-grid">
 
@@ -160,7 +161,7 @@
       </div>
     </section>
 
-  <section class="experience-section">
+  <section class="experience-section" data-animate>
   <h2 class="experience-title">Experience</h2>
 
   <div class="timeline">
@@ -194,6 +195,37 @@
   </div>
 </section>
 
+  <section class="academic-section" data-animate>
+  <h2 class="academic-title">Academic training</h2>
+  <div class="academic-timeline">
+    <!-- ITEM 1 -->
+    <div class="timeline-item">
+      <div class="timeline-year">2023</div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3 class="timeline-role">Senior Python Developer</h3>
+        <p class="timeline-company">TechCorp Solutions</p>
+        <p class="timeline-description">
+          Led a team of backend engineers in developing scalable ERPNext modules. Improved system performance by 30%, integrated multiple third-party APIs, and conducted weekly code reviews to uphold quality standards across distributed teams.
+        </p>
+      </div>
+    </div>
+
+    <!-- ITEM 2 -->
+    <div class="timeline-item">
+      <div class="timeline-year">2022</div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3 class="timeline-role">Full Stack Developer</h3>
+        <p class="timeline-company">BrightApps</p>
+        <p class="timeline-description">
+          Developed full-stack web applications using Flask and Vue.js. Optimized database queries for MongoDB and worked closely with UI/UX teams to improve front-end consistency and accessibility across platforms.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
 <!-- ...existing code... -->
 <footer>
   <section class="contact-section" id="contact">
@@ -226,5 +258,6 @@
 });
 </script>
 <script src="js/index.js"></script>
+<script src="js/scrollAnimation.js"></script>
 </body>
 </html>

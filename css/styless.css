@@ -153,9 +153,10 @@ h1, h2, h3 {
   content: '';
   display: block;
   height: 3px;
-  width: 100%;
+  width: 0;
+  opacity: 0;
   margin-top: 10px;
-
+  border-radius: 2px;
   background: linear-gradient(
     to right,
     transparent 0%,
@@ -163,16 +164,25 @@ h1, h2, h3 {
     #f5c242 80%,
     transparent 100%
   );
-  animation: aboutLineCascade 1s ease-out forwards;
+  /* animation: aboutLineCascade 1s ease-out forwards; */
+  transition: all 1s ease-out;
+
+}
+.about-title.animate::after {
+  width: 100%;
+  opacity: 1;
 }
 @keyframes aboutLineCascade {
   from {
     width: 0;
+    opacity: 0;
   }
   to {
     width: 100%;
+    opacity: 1;
   }
 }
+
 
 /* .vertical-line {
   width: 2px;
@@ -326,20 +336,32 @@ footer {
 /* Línea vertical con gradiente difuminado arriba */
 .vertical-line {
   width: 2px;
-  height: 150px;
+  height: 0px;
   background: linear-gradient(to bottom, transparent, #f5c242, #f5c242);
   margin-bottom: 15px;
-  animation: verticalCascade 1.2s ease-out forwards;
+  opacity: 0;
+  transform: scaleY(0.8);
+  transition: all 1s ease-out;
+  /* animation: verticalCascade 0.2s ease-out forwards;
+  animation-delay: 0.3s; */
 }
 @keyframes verticalCascade {
   from {
     height: 0;
+    opacity: 0;
+    transform: scaleY(0.8);
   }
   to {
     height: 150px;
+    opacity: 1;
+    transform: scaleY(1);
   }
 }
-
+.vertical-line.animate {
+  height: 150px;
+  opacity: 1;
+  transform: scaleY(1);
+}
 /* Íconos sociales en vertical */
 .social-icons {
   display: flex;
@@ -365,95 +387,6 @@ footer {
 .icon-link:hover {
   background-color: #f5c242;
   color: #1e1e1e;
-}
-/* === Experience Section === */
-.experience-section {
-  background-color: #2a2a2a; /* gris menos opaco */
-  padding: 60px 40px;
-  margin-top: 60px;
-  border-radius: 20px;
-  position: relative;
-}
-
-.experience-title {
-  text-align: center;
-  font-size: 2rem;
-  color: #f5c242;
-  margin-bottom: 40px;
-}
-
-/* Timeline Layout */
-.timeline {
-  position: relative;
-  margin-left: 60px;
-  padding-left: 40px;
-  border-left: 2px solid #f5c24255; /* línea con opacidad */
-}
-
-.timeline-item {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 50px;
-  position: relative;
-}
-
-.timeline-dot {
-  position: absolute;
-  left: -11px;
-  top: 5px;
-  width: 18px;
-  height: 18px;
-  background-color: #f5c242;
-  border-radius: 50%;
-  box-shadow: 0 0 10px #f5c242, 0 0 20px #f5c24266;
-  z-index: 1;
-  animation: pulse 1.5s infinite;
-}
-
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(245, 194, 66, 0.7), 0 0 10px #f5c242, 0 0 20px #f5c24266;
-  }
-  70% {
-    box-shadow: 0 0 0 15px rgba(245, 194, 66, 0), 0 0 10px #f5c242, 0 0 20px #f5c24266;
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(245, 194, 66, 0.7), 0 0 10px #f5c242, 0 0 20px #f5c24266;
-  }
-}
-
-.timeline-year {
-  position: absolute;
-  left: -60px;
-  top: 0;
-  font-weight: bold;
-  color: #f5c242;
-  font-size: 0.95rem;
-}
-
-.timeline-content {
-  margin-left: 20px;
-  max-width: 600px;
-}
-
-.timeline-role {
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: #ffffff;
-}
-
-.timeline-company {
-  font-size: 1rem;
-  font-style: italic;
-  color: #c7c7c7;
-  margin-bottom: 10px;
-}
-
-.timeline-description {
-  font-size: 0.95rem;
-  color: #dddddd;
-  text-align: justify;
-  line-height: 1.6;
 }
 /* === Portfolio Section === */
 .portfolio-section {
@@ -545,6 +478,151 @@ footer {
 .card-back p {
   font-size: 0.95rem;
   color: #dddddd;
+}
+/* === Experience Section === */
+.experience-section {
+  background-color: #2a2a2a; /* gris menos opaco */
+  padding: 60px 40px;
+  margin-top: 60px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.experience-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #f5c242;
+  margin-bottom: 40px;
+}
+
+/* Timeline Layout */
+.timeline {
+  position: relative;
+  margin-left: 60px;
+  padding-left: 40px;
+  border-left: 2px solid #f5c24255; /* línea con opacidad */
+}
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -11px;
+  top: 5px;
+  width: 18px;
+  height: 18px;
+  background-color: #f5c242;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #f5c242, 0 0 20px #f5c24266;
+  z-index: 1;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(245, 194, 66, 0.7), 0 0 10px #f5c242, 0 0 20px #f5c24266;
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(245, 194, 66, 0), 0 0 10px #f5c242, 0 0 20px #f5c24266;
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(245, 194, 66, 0.7), 0 0 10px #f5c242, 0 0 20px #f5c24266;
+  }
+}
+
+.timeline-year {
+  position: absolute;
+  left: -60px;
+  top: 0;
+  font-weight: bold;
+  color: #f5c242;
+  font-size: 0.95rem;
+}
+
+.timeline-content {
+  margin-left: 20px;
+  max-width: 600px;
+}
+
+.timeline-role {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.timeline-company {
+  font-size: 1rem;
+  font-style: italic;
+  color: #c7c7c7;
+  margin-bottom: 10px;
+}
+
+.timeline-description {
+  font-size: 0.95rem;
+  color: #dddddd;
+  text-align: justify;
+  line-height: 1.6;
+}
+/* === Academic Section === */
+.academic-section {
+  background-color: #2a2a2a; /* gris menos opaco */
+  padding: 60px 40px;
+  margin-top: 60px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.academic-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #f5c242;
+  margin-bottom: 40px;
+}
+.academic-timeline {
+  margin-left: 0;
+  padding-left: 0;
+  border-left: none;
+  border-right: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.academic-timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: #f5c24255;
+  z-index: 0;
+}
+/* Ajusta los items para que estén alineados justo a la derecha de la línea */
+.academic-timeline .timeline-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 50px;
+  position: relative;
+  width: 100%;
+  /* justify-content: flex-start;  <-- puedes omitirlo, es el valor por defecto */
+}
+
+.academic-timeline .timeline-content {
+  max-width: 500px;      /* Ajusta según tu diseño */
+  margin-left: 0px;     /* Espacio entre la línea y el contenido */
+}
+
+.academic-timeline .timeline-dot {
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
 }
 /* ...existing code... */
 .download-cv-button {

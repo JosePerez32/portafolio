@@ -43,3 +43,39 @@ sr.reveal('.contact-section', {
     distance: '100px',
     interval: 200
 }); 
+sr.reveal('.academic-section', {
+  duration: 3000,    
+    origin: 'bottom',
+    distance: '-100px',
+    interval: 200       
+}); 
+sr.reveal('.social-icons', {
+  duration: 3000,       
+    origin: 'bottom',
+    distance: '-100px'
+});
+sr.reveal('.vertical-line', {
+  duration: 3000,       
+    origin: 'bottom',
+    distance: '-100px',
+    interval: 200
+});
+sr.reveal('.about-title', {
+  duration: 3000,       
+    origin: 'bottom',
+    distance: '-100px',
+    interval: 200
+});
+sr.reveal('.about-title::after', {
+  duration: 3000,       
+    origin: 'bottom',
+    distance: '-100px',
+    interval: 200
+});
+
+sr.reveal('.vertical-line.animate', {
+  duration: 3000,
+    origin: 'bottom',
+    distance: '-100px',
+    interval: 200   
+});
