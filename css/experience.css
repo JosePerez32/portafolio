@@ -1,0 +1,99 @@
+/* === Experience Section === */
+.experience-section {
+  background-color: #2a2a2a;
+  padding: 60px 40px;
+  margin-top: 60px;
+  border-radius: 20px;
+  /* position: relative; */
+}
+
+.experience-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #f5c242;
+  margin-bottom: 40px;
+}
+
+/* Timeline Layout */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 120px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 80px;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background: #f5c24255;
+}
+.timeline-item {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -40px;
+  top: 5px;
+  transform: translateX(-50%);
+  width: 18px;
+  height: 18px;
+  background-color: #f5c242;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #f5c242, 0 0 20px #f5c24266;
+  z-index: 1;
+  animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(245, 194, 66, 0.7), 0 0 10px #f5c242, 0 0 20px #f5c24266;
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(245, 194, 66, 0), 0 0 10px #f5c242, 0 0 20px #f5c24266;
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(245, 194, 66, 0.7), 0 0 10px #f5c242, 0 0 20px #f5c24266;
+  }
+}
+
+.timeline-year {
+  position: absolute;
+  /* left: 15%; */
+  left: -120px;
+  top: 0;
+  /* width: 40px; */
+  width: 80px;
+  text-align: right;
+  padding-right: 15px; 
+  color: #f5c242;
+  font-weight: bold;
+}
+
+.timeline-content {
+  padding-left: 20px;
+}
+
+.timeline-role {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.timeline-company {
+  font-size: 1rem;
+  font-style: italic;
+  color: #c7c7c7;
+  margin-bottom: 10px;
+}
+
+.timeline-description {
+  font-size: 0.95rem;
+  color: #dddddd;
+  text-align: justify;
+  line-height: 1.6;
+}

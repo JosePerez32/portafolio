@@ -5,8 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Hello! I'm José Pérez - Full Stack Developer.</title>
   <link rel="stylesheet" href="./css/styless.css" />
+  <link rel="stylesheet" href="./css/academic.css" />
+  <link rel="stylesheet" href="./css/experience.css" />
+  <link rel="stylesheet" href="./css/elements.css" />
   <script src="./js/scrollreveal.js"></script>
   <script src="./js/scrollAnimation.js"></script>
+  <script src="./js/buttonScroll.js"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -14,13 +18,16 @@
 
 </head>
 <body>
+
   <header>
     <nav class="navbar">
       <div class="logo">JP</div>
       <ul class="nav-links">
-        <li><a href="#">About</a></li>
-        <li><a href="#" class="portfolio-button" onclick="location.href='#porfolio'">Portfolio</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#skills" class="skills-button" >Skills</a></li>
+        <li><a href="#portfolio" class="portfolio-button" >Portfolio</a></li>
+        <li><a href="#experience" class="experience-button" >Experience</a></li>
+        <li><a href="#academic" class="academic-button" >Academic Training</a></li>
+        <li><a href="#contact" class="contacti-button" >Contact</a></li>
       </ul>
       <a href="elements/Jose Perez 2025 - CV(EN).pdf" class="download-cv-button" download>Download CV</a>
     </nav>
@@ -37,19 +44,21 @@
       <img src="./elements/photo.png" alt="Ivan Dan" />
     </div>
     <div class="vertical-line-container">
-  <div class="vertical-line" data-animate></div>
-  <div class="social-icons">
-    <!-- Puedes poner tus íconos aquí -->
-     <a href="https://www.linkedin.com/in/jcperez0815/" class="icon-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-      <a href="https://github.com/JosePerez32" class="icon-link" title="GitHub"><i class="fab fa-github"></i></a>
-      <a href="#" class="icon-link" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <div class="vertical-line" data-animate></div>
+        <div class="social-icons">
+          <!-- Puedes poner tus íconos aquí -->
+          <a href="https://www.linkedin.com/in/jcperez0815/" class="icon-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/JosePerez32" class="icon-link" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" class="icon-link" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
 
-  </div>
-</div>
+        </div>
+    </div>
   </section>
-
+  
   <section class="about">
+   
     <h2 class="about-title" data-animate>About</h2>
+    
     <p>
       Hi! I’m José Pérez, a Software Engineer (Intelligent Systems) and Full Stack Developer with a tech journey that began at 15, when I first programmed in Turbo C on Windows 97 machines during my vocational training in Mexico. Later, I earned my degree at UAMex, one of Mexico’s top autonomous universities, where I spent five years mastering programming languages, software development tools, and the fundamentals of artificial intelligence—now a cornerstone of modern tech.
       Professionally, I’ve worked as a database administrator (DB2, MySQL), developed full-stack applications using React, JavaScript, .NET/C#, and Python, and configured infrastructure with Ubuntu Server and OpenShift. After moving to Belgium in 2017, I expanded my skills with specialized training in C# .NET and embraced collaborative development workflows with GitHub.
@@ -59,7 +68,7 @@
     </p>
   </section>
 
-  <section class="skills">
+  <section class="skills" id="skills" data-animate>
     <h2 class="skills-title">My Skills</h2>
     <div class="skills-grid">
       <div class="skill-box">Python</div>
@@ -156,7 +165,7 @@
     </div>
   </section>
 
-  <section class="experience-section" data-animate>
+  <section class="experience-section" id="experience" data-animate>
     <h2 class="experience-title">Experience</h2>
     <div class="timeline">
       <!-- ITEM 1 -->
@@ -187,7 +196,7 @@
   </section>
 
   <!-- En tu index.html, reemplaza la sección Academic Training con esto: -->
-  <section class="academic-section" data-animate>
+  <section class="academic-section" id="academic" data-animate>
     <h2 class="academic-title">Academic training</h2>
     <div class="academic-timeline">
       <!-- ITEM 1 (derecha) -->
@@ -204,7 +213,7 @@
         </div>
       </div>
       <!-- ITEM 2 (derecha) -->
-      <div class="timeline-item right">
+      <div class="timeline-item left">
         <div class="timeline-dot"></div>
         <div class="timeline-year">2015</div>
         
@@ -221,7 +230,7 @@
 
 <!-- ...existing code... -->
 <footer>
-  <section class="contact-section" id="contact">
+  <section class="contacti-section contact-section" id="contact">
     <h2>Contact Me</h2>
     <form class="contact-form" action="mailto:tuemail@ejemplo.com" method="POST" enctype="text/plain">
       <label for="name">Your Name</label>
@@ -240,17 +249,21 @@
     </form>
   </section>
 </footer>
-<!-- ...existing code... -->
-| <script>
+
+  <!-- ...existing code... -->
+  |<script>
   // Initialize ScrollReveal
-  
- document.querySelectorAll('.portfolio-card').forEach(card => {
-  card.addEventListener('click', function () {
-    this.classList.toggle('flipped');
+  document.querySelectorAll('.portfolio-card').forEach(card => {
+    card.addEventListener('click', function () {
+      this.classList.toggle('flipped');
+    });
   });
-});
-</script>
-<script src="js/index.js"></script>
-<script src="js/scrollAnimation.js"></script>
+  </script>
+  <button id="scrollToTopBtn" title="Go to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+  <script src="js/index.js"></script>
+  <script src="js/scrollAnimation.js"></script>
+  <script src="js/buttonScroll.js"></script>
 </body>
 </html>

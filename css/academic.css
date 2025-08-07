@@ -1,0 +1,127 @@
+/* === Academic Section === */
+.academic-section {
+  background-color: #2a2a2a; /* gris menos opaco */
+  padding: 60px 40px;
+  margin-top: 60px;
+  border-radius: 20px;
+  /* position: relative; */
+}
+
+.academic-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #f5c242;
+  margin-bottom: 40px;
+}
+
+.academic-timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.academic-timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: #f5c24255;
+  z-index: 0;
+}
+/* Ajusta los items para que estén alineados justo a la derecha de la línea */
+
+.academic-timeline .timeline-item {
+  display: contents; /* Permite que los hijos se alineen en el grid */
+}
+/* Año */
+.timeline-item {
+  position: relative;
+  margin-bottom: 50px;
+}
+.academic-section .timeline-year {
+  position: absolute;
+  left: calc(50% + 15px); /* Año a la derecha del punto */
+  top: 5px;
+  color: #f5c242;
+  font-weight: bold;
+}
+.academic-timeline .timeline-year {
+  position: absolute;
+  top: 5px;
+  color: #f5c242;
+  font-weight: bold;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  z-index: 2;
+}
+.academic-section .timeline-dot {
+  left: 9px;
+  grid-column: 2;
+  justify-self: center;
+  position: relative;
+  top: 5px;
+}
+/* Contenido */
+.academic-section .timeline-content {
+  padding-left: 30px;
+}
+.academic-timeline .timeline-content {
+  max-width: 400px;
+  padding: 0 20px;
+}
+.timeline-item.left .timeline-content {
+  max-width: 1000px;/* Aumenta el ancho para que ocupe más espacio */
+  padding: 5px 20px;
+}
+.timeline-item.left {
+  text-align: left;
+  padding-right: 100%;
+}
+.academic-section.left .timeline-role {
+  padding-left: 10px;
+} 
+.academic-section.left .timeline-company {
+  padding-left: 10px;
+} 
+.academic-section.left .timeline-description {
+  text-align: right;
+  right: 5%;
+}
+.timeline-item.left .timeline-content {
+  padding-left: 500px;
+} 
+
+.academic-timeline .timeline-item.left .timeline-year {
+  right: 100%; /* a la derecha del punto */
+}
+.timeline-item.left .timeline-year {
+  position: absolute;
+  right: calc(100% + 25px);
+  top: 160px;
+  color: #f5c242;
+  font-weight: bold;
+}
+.academic-section .timeline-item.right {
+  text-align: left;
+  padding-left: 1000%;
+}
+.timeline-item.right .timeline-content {
+  padding-left: 0px;
+}
+
+.academic-timeline .timeline-item.right .timeline-year {
+  left: 40%; /* a la izquierda del punto */
+}
+.timeline-item.right .timeline-year {
+  position: absolute;
+  left: calc(50% + 25px);
+  top: 1px;
+  color: #f5c242;
+  font-weight: bold;
+}
+
+
+
+

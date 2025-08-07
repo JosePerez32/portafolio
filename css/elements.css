@@ -1,0 +1,39 @@
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 1000;
+  background: linear-gradient(90deg, #f5c242 60%, gold 100%);
+  color: #232323;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 1.5rem;
+  box-shadow: 0 2px 8px rgba(245, 194, 66, 0.2);
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s, transform 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#scrollToTopBtn.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* Contenedor para línea izquierda */
+.vertical-line-container.left {
+  position: fixed;
+  left: 40px; /* Ajusta esta distancia desde el borde izquierdo */
+  top: 50%;
+  transform: translateY(-50%);
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+}
