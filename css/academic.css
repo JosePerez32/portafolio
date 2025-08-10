@@ -23,7 +23,7 @@
   content: '';
   position: absolute;
   left: 50%;
-  top: 0;
+  top: 0px;
   transform: translateX(-50%);
   width: 2px;
   height: 100%;
@@ -41,15 +41,26 @@
   margin-bottom: 50px;
 }
 .academic-section .timeline-year {
-  position: absolute;
-  left: calc(50% + 15px); /* Año a la derecha del punto */
-  top: 5px;
+  position: relative;
+  left: calc(38% + 10px); /* Año a la derecha del punto */
+  top: 50%;
   color: #f5c242;
   font-weight: bold;
 }
+/* .timeline-item.left .timeline-year {
+  position: relative;
+  left: calc(50% - 100px); /* Año a la derecha del punto */
+/*  top: 5px;
+  color: #f5c242;
+  font-weight: bold;
+} */
+.academic-timeline .timeline-item:nth-child(2) .timeline-year {
+  top: 460px;
+}
+
 .academic-timeline .timeline-year {
-  position: absolute;
-  top: 5px;
+  position: relative;
+  /* top: 5px; */
   color: #f5c242;
   font-weight: bold;
   font-size: 0.9rem;
@@ -61,12 +72,14 @@
   grid-column: 2;
   justify-self: center;
   position: relative;
-  top: 5px;
+  top: 20px;
 }
 /* Contenido */
 .academic-section .timeline-content {
   padding-left: 30px;
+  text-align: right;
 }
+
 .academic-timeline .timeline-content {
   max-width: 400px;
   padding: 0 20px;
@@ -74,6 +87,7 @@
 .timeline-item.left .timeline-content {
   max-width: 1000px;/* Aumenta el ancho para que ocupe más espacio */
   padding: 5px 20px;
+  text-align: left;
 }
 .timeline-item.left {
   text-align: left;
@@ -93,33 +107,42 @@
   padding-left: 500px;
 } 
 
-.academic-timeline .timeline-item.left .timeline-year {
-  right: 100%; /* a la derecha del punto */
+.academic-timeline .timeline-item.right .timeline-year {
+  right: 150%; /* a la derecha del punto */
 }
-.timeline-item.left .timeline-year {
+.timeline-item.right .timeline-year {
   position: absolute;
   right: calc(100% + 25px);
-  top: 160px;
+  top: 300px;
   color: #f5c242;
   font-weight: bold;
 }
 .academic-section .timeline-item.right {
   text-align: left;
-  padding-left: 1000%;
+  padding-left: 1500%;
 }
 .timeline-item.right .timeline-content {
   padding-left: 0px;
 }
 
 .academic-timeline .timeline-item.right .timeline-year {
-  left: 40%; /* a la izquierda del punto */
+  left: 50%; /* a la izquierda del punto */
 }
 .timeline-item.right .timeline-year {
-  position: absolute;
-  left: calc(50% + 25px);
-  top: 1px;
+  position: relative;
+  left: calc(60% + 205px);
+  top: 1px;/* La altura del año */
   color: #f5c242;
   font-weight: bold;
+}
+.academic-timeline .timeline-item:nth-child(3).timeline-item.timeline-item.right .timeline-year {
+  left: calc(50% + 30px);
+}
+.academic-timeline .timeline-item:nth-child(2).timeline-item.left .timeline-year {
+  top: 1px;
+}
+.academic-timeline .timeline-item:nth-child(4).timeline-item.left .timeline-year {
+  top: 1px;
 }
 
 

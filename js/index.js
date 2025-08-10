@@ -79,3 +79,9 @@ sr.reveal('.vertical-line.animate', {
     distance: '-100px',
     interval: 200   
 });
+sr.reveal('.Languages', {
+  duration: 3000,    
+    origin: 'bottom',
+    distance: '-100px',
+    interval: 200   
+});

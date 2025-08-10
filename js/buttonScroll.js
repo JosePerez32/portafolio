@@ -1,4 +1,5 @@
-const scrollBtn = document.getElementById('scrollToTopBtn');
+document.addEventListener('DOMContentLoaded', function() {
+  const scrollBtn = document.getElementById('scrollToTopBtn');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 200) {
       scrollBtn.classList.add('show');
@@ -6,10 +7,11 @@ const scrollBtn = document.getElementById('scrollToTopBtn');
       scrollBtn.classList.remove('show');
     }
   });
-
   scrollBtn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
+});
+// This code adds a scroll-to-top button that appears when the user scrolls down the page
 
 
 // En tu scrollAnimation.js o similar

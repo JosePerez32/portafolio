@@ -20,14 +20,14 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: #2b2b2b;
-  padding: 10px 20px;
+  padding: 5px 0px;
   border-radius: 10px;
 }
 
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 20px;
+  gap: 30px;
 }
 
 .nav-links a {
@@ -41,7 +41,7 @@ body {
   align-items: center;
 }
 
-.nav-links a {
+/* .nav-links a {
   color: #ece468;
   text-decoration: none;
   font-weight: 500;
@@ -49,6 +49,24 @@ body {
   border-radius: 6px;
   transition: background 0.2s, color 0.2s, box-shadow 0.2s;
   font-size: 1rem;
+} */
+/* .nav-links a:hover,
+.nav-links a:focus {
+  background: #f5c242;
+  color: #232323;
+  box-shadow: 0 2px 8px rgba(245, 194, 66, 0.15);
+  outline: none;
+} */
+ .nav-links a {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-weight: 100;
+  letter-spacing: 1px;
+  font-size: 1.08rem;
+  color: #ece468;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
 }
 
 .nav-links a:hover,
@@ -152,19 +170,25 @@ h1, h2, h3 {
   background-color: #e0ac29;
 }
 .about {
-  margin-top: 30px;
-  padding-left: 20%;
+  margin: 30px auto 0; /* 30px arriba, centrado horizontalmente */
+
   width: 70% ;
-
-  display: block;      /* Cambia de flex a block */ 
-
+  max-width: 800px; /* Opcional: establece un ancho máximo para mejor lectura */
+  text-align: center;
 }
-.about-title {
+/* .about-title {
   text-align: center;
   font-size: 2rem;
   color: #f5c242;
   margin-bottom: 40px;
   
+} */
+ .about-title {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 700;
+  font-size: 2.1rem;
+  letter-spacing: 1px;
+  color: #f5c242;
 }
 /* Esta es la linea del about */
 .about h2::after {
@@ -200,11 +224,19 @@ h1, h2, h3 {
     opacity: 1;
   }
 }
-.about p {
+/* .about p {
   color: #c0c0c0;
   text-align: justify;
   margin-top: 20px;
   font-size: 1.05rem;
+} */
+ .about p {
+  /* font-family: 'Times New Roman', 'Times New Roman Condensed', Times, serif; */
+  font-size: 1.08rem;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 0.2px;
+  color: #c9ccb7;
 }
 .about h2 {
   font-size: 2em;
@@ -214,19 +246,50 @@ h1, h2, h3 {
 .skills {
   margin-top: 40px;
 }
-.skill-box {
+/* .skill-box {
+  display: flex;
+  align-items: center;
   transition: 
     color 0.2s,
     box-shadow 0.2s,
     border-color 0.2s;
   /*border: 1px solid #ccc;*/
-  height: 100px;
+/*  height: 150px;
+  width: auto;
   padding: 16px 24px;
   border-radius: 8px;
   background: #2e2e2e;
   text-align: center;
   font-weight: 500;
   cursor: pointer;
+} */
+ .skill-box {
+  /* Mantén tus estilos actuales y agrega: */
+  display: flex;
+  flex-direction: column;
+  transition: 
+    color 0.2s,
+    box-shadow 0.2s,
+    border-color 0.2s;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 10px; /* Ajusta el padding para mejor espaciado */
+}
+
+.skill-name {
+  margin-bottom: 8px; /* Espacio entre texto e icono */
+  font-size: 1rem; /* Ajusta según necesites */
+  text-align: center;
+}
+
+.skill-icon {
+  font-size: 1.8rem; /* Tamaño del icono */
+  color: #f5c242; /* Color que coincida con tu tema */
+}
+.skill-box i {
+  margin-right: 8px;
+  font-size: 2em;
+  vertical-align: middle;
 }
 .skills-title {
   text-align: center;
@@ -248,7 +311,8 @@ h1, h2, h3 {
 .skills-grid {
   display: grid;
   /* grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); */
-  grid-template-columns: repeat(6, 1fr); /* Fuerza 3 columnas */
+  /*grid-template-columns: repeat(6, 1fr); Fuerza 3 columnas*/
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); /* Cambio clave */
   gap: 15px;
   justify-content: center;      /* Centra las columnas incompletas */
   max-width: 900px;             /* Ajusta el ancho máximo según tu diseño */
