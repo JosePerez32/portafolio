@@ -61,6 +61,8 @@
 .academic-timeline .timeline-year {
   position: relative;
   /* top: 5px; */
+   width: 100px;
+    padding-right: 30px; 
   color: #f5c242;
   font-weight: bold;
   font-size: 0.9rem;

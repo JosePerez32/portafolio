@@ -64,12 +64,12 @@
 .timeline-year {
   position: absolute;
   /* left: 15%; */
-  left: -120px;
+  left: -200px;
   top: 0;
   /* width: 40px; */
-  width: 80px;
+  width: 120px;
   text-align: right;
-  padding-right: 15px; 
+  padding-right: 0px; 
   color: #f5c242;
   font-weight: bold;
 }

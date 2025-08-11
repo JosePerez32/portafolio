@@ -37,3 +37,20 @@
   align-items: center;
   z-index: 10;
 }
+/* Zoom hover */
+.zoom-wrapper {
+  width: 100%;       /* Ancho deseado (ajusta según necesites) */
+  height: 100%;     /* Altura fija (o usa min-height/max-height) */
+  border-radius: 16px;
+}
+.zoom-wrapper img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;       /* Ocupa el 100% del ancho del contenedor */
+  height: 300px;      /* Ocupa el 100% de la altura del contenedor */
+  transition: transform 0.8s;
+  object-fit: fill;  /* ¡Clave! Distorsiona la imagen para llenar el espacio */
+}
+.zoom-wrapper:hover img {
+  transform: scale(1.5);
+}

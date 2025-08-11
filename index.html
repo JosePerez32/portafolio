@@ -21,7 +21,7 @@
 
   <header>
     <nav class="navbar">
-      <div class="logo">JP</div>
+      <div class="logo"><img src="./elements/jp.png" alt="José Pérez Logo" style="border-radius: 10px; padding-left:10px; height:50px; width:auto; "></div>
       <ul class="nav-links">
         <li><a href="#skills" class="skills-button" >Skills</a></li>
         <li><a href="#portfolio" class="portfolio-button" >Portfolio</a></li>
@@ -51,7 +51,9 @@
           <!-- Puedes poner tus íconos aquí -->
           <a href="https://www.linkedin.com/in/jcperez0815/" class="icon-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             <a href="https://github.com/JosePerez32" class="icon-link" title="GitHub"><i class="fab fa-github"></i></a>
-            <a href="#" class="icon-link" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+           <a href="https://wa.be/320456544846" target="_blank" class="icon-link" title="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
 
         </div>
     </div>
@@ -101,7 +103,7 @@
         <i class="fab fa-microsoft skill-icon"></i>
       </div>
       <div class="skill-box">
-        <div class="skill-name">OpenShift / Docker Swarm / Kubernetes</div>
+        <div class="skill-name" title="OpenShift / Docker Swarm / Kubernetes">Containers and orchestration.</div>
         <i class="fab fa-docker skill-icon"></i>
       </div>
       <div class="skill-box">
@@ -117,9 +119,10 @@
       <!-- Proyecto 1 -->
       <div class="portfolio-card">
         <div class="card-inner">
-          <div class="card-front">
-            <img src="./elements/img-1.png" alt="Project 1">
-          </div>
+            <div class="card-front zoom-wrapper">
+              <img src="./elements/img1.png" alt="Project 1">
+            </div>
+          <!-- Voltear tarjeta al hacer clic -->
           <div class="card-back">
             <h3>ERP Module Builder</h3>
             <p>Custom ERPNext module for managing HR tasks with full reporting and workflow logic.</p>
@@ -129,8 +132,8 @@
       <!-- Proyecto 2 -->
       <div class="portfolio-card">
         <div class="card-inner">
-          <div class="card-front">
-            <img src="./elements/img-2.png" alt="Project 2">
+          <div class="card-front zoom-wrapper">
+            <img src="./elements/img2.png" alt="Project 2">
           </div>
           <div class="card-back">
             <h3>Python Scraper</h3>
@@ -142,8 +145,8 @@
       <!-- Proyecto 3 -->
       <div class="portfolio-card">
         <div class="card-inner">
-          <div class="card-front">
-            <img src="./elements/img-3.png" alt="Project 3">
+          <div class="card-front zoom-wrapper">
+            <img src="./elements/img3.png" alt="Project 3">
           </div>
           <div class="card-back">
             <h3>Frappe Dashboard</h3>
@@ -155,8 +158,8 @@
       <!-- Proyecto 4 -->
       <div class="portfolio-card">
         <div class="card-inner">
-          <div class="card-front">
-            <img src="./elements/img-4.png" alt="Project 4">
+          <div class="card-front zoom-wrapper">
+            <img src="./elements/img4.png" alt="Project 4">
           </div>
           <div class="card-back">
             <h3>Mobile App (Flutter)</h3>
@@ -168,8 +171,8 @@
       <!-- Proyecto 5 -->
       <div class="portfolio-card">
         <div class="card-inner">
-          <div class="card-front">
-            <img src="./elements/img-5.png" alt="Project 5">
+          <div class="card-front zoom-wrapper">
+            <img src="./elements/img5.png" alt="Project 5">
           </div>
           <div class="card-back">
             <h3>Linux Automation Scripts</h3>
@@ -180,8 +183,8 @@
       <!-- Proyecto 6 -->
       <div class="portfolio-card">
         <div class="card-inner">
-          <div class="card-front">
-            <img src="./elements/img-6.png" alt="Project 6">
+          <div class="card-front zoom-wrapper">
+            <img src="./elements/img6.png" alt="Project 6">
           </div>
           <div class="card-back">
             <h3>GitHub Actions CI/CD</h3>
@@ -313,7 +316,7 @@
   <footer>
     <section class="contacti-section contact-section" id="contact">
       <h2>Contact Me</h2>
-      <form class="contact-form" action="mailto:tuemail@ejemplo.com" method="POST" enctype="text/plain">
+      <form class="contact-form" action="https://formspree.io/f/mldlzdgk" method="POST">
         <label for="name">Your Name</label>
         <input type="text" id="name" name="name" required>
 
@@ -330,8 +333,9 @@
       </form>
     </section>
   </footer>
-
-
+  <footer class="footer">
+    <p>&copy; 2024 José Pérez. All rights reserved.</p>
+    <p>Designed with ❤️ by José Pérez</p>
   <!-- ...existing code... -->
   |<script>
   // Initialize ScrollReveal
