@@ -36,16 +36,13 @@ body {
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 30px;
+  gap: 50px;
 }
 
-.nav-links a {
-  color: #ece468;
-  text-decoration: none;
-}
+
 .nav-links {
   display: flex;
-  gap: 24px;
+  gap: 50px;
   list-style: none;
   align-items: center;
 }
@@ -68,16 +65,16 @@ body {
 } */
  .nav-links a {
   font-family: 'Helvetica', 'Arial', sans-serif;
-  font-weight: 100;
+  font-weight: 150;
   letter-spacing: 1px;
-  font-size: 1.08rem;
+  font-size: 1.2rem;
   color: #ece468;
+  background: #25251f;
   text-decoration: none;
-  padding: 12px 24px;
-  border-radius: 6px;
+  padding: 18px 36px;
+  border-radius: 3px;
   transition: background 0.2s, color 0.2s, box-shadow 0.2s;
 }
-
 .nav-links a:hover,
 .nav-links a:focus {
   background: #f5c242;
@@ -112,7 +109,7 @@ body {
 }
 .hero-text h1 {
   font-size: 3rem;
-  font-weight: 700;
+  font-weight: 500;
   color: #ffffff;
 }
 
@@ -121,23 +118,32 @@ body {
 }
 
 .hero-text p {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: #c7c7c7;
   margin-top: 10px;
 }
 
 .highlight {
-  color: gold;
+  color: gold; /* Amarillo dorado que coincide con tu tema */
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
 }
 
+/* Efecto opcional al pasar el mouse */
+.highlight:hover {
+  text-shadow: 0 0 8px rgba(245, 194, 66, 0.4);
+  cursor: default;
+}
 /* Botón de contacto */
 .contact-button {
   margin-top: 20px;
-  padding: 12px 24px;
+  padding: 24px 48px;
   background-color: #f5c242;
   border: none;
   border-radius: 8px;
   font-weight: bold;
+  font-size: 1rem;
   color: #1e1e1e;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -205,7 +211,7 @@ h1, h2, h3 {
  .about-title {
   font-family: 'Times New Roman', Times, serif;
   font-weight: 700;
-  font-size: 2.1rem;
+  font-size: 2.5rem;
   letter-spacing: 1px;
   color: #f5c242;
 }
@@ -258,7 +264,7 @@ h1, h2, h3 {
   color: #fdfdfd;
 }
 .about h2 {
-  font-size: 2em;
+  font-size: 2.5em;
   margin-bottom: 10px;
   text-align: left;    /* Asegura que el título esté alineado a la izquierda */
 }
@@ -286,13 +292,14 @@ h1, h2, h3 {
   /* Mantén tus estilos actuales y agrega: */
   display: flex;
   flex-direction: column;
+  border-radius: 20px;
   transition:
     color 0.2s,
     box-shadow 0.2s,
     border-color 0.2s;
   align-items: center;
   justify-content: center;
-  padding: 16px 10px; /* Ajusta el padding para mejor espaciado */
+  padding: 16px 15px; /* Ajusta el padding para mejor espaciado */
 }
 
 .skill-name {
@@ -307,12 +314,13 @@ h1, h2, h3 {
 }
 .skill-box i {
   margin-right: 8px;
-  font-size: 2em;
+  font-size: 3.5em;
   vertical-align: middle;
 }
 .skills-title {
   text-align: center;
-  font-size: 2rem;
+  font-size: 0.2rem;
+  font-weight: 200;
   color: #f5c242;
   margin-bottom: 40px;
 }
@@ -323,7 +331,7 @@ h1, h2, h3 {
   background: #ffd609d5;
 }
 .skills h2 {
-  font-size: 2em;
+  font-size: 2.5em;
   margin-bottom: 20px;
 }
 
@@ -331,11 +339,16 @@ h1, h2, h3 {
   display: grid;
   /* grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); */
   /*grid-template-columns: repeat(6, 1fr); Fuerza 3 columnas*/
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); /* Cambio clave */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Cambio clave */
   gap: 15px;
   justify-content: center;      /* Centra las columnas incompletas */
   max-width: 1000px;             /* Ajusta el ancho máximo según tu diseño */
   margin: 0 auto;      
+}
+/* Para forzar que los últimos elementos se centren */
+.skills-grid::after {
+  content: "";
+  flex: auto;
 }
 /* ...existing code... */
 footer {
@@ -417,7 +430,7 @@ footer {
 /* Línea vertical con gradiente difuminado arriba */
 .vertical-line {
   width: 2px;
-  height: 0px;
+  height: 100px;
   background: linear-gradient(to bottom, transparent, #f5c242, #f5c242);
   margin-bottom: 15px;
   opacity: 0;
@@ -439,7 +452,7 @@ footer {
   }
 }
 .vertical-line.animate {
-  height: 150px;
+  height: 200px;
   opacity: 1;
   transform: scaleY(1);
 }
@@ -447,9 +460,11 @@ footer {
 .social-icons {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 30px;
 }
-
+.social-icons .icon-link i {
+  font-size: 2.2rem; /* O el tamaño que prefieras */
+}
 /* Estilos de íconos placeholder (puedes poner íconos reales luego) */
 .icon-link {
   display: inline-flex;
@@ -458,7 +473,7 @@ footer {
   width: 35px;
   height: 35px;
   background-color: #2e2e2e;
-  color: #ffffff;
+  color: #fcd247;
   border-radius: 50%;
   font-weight: bold;
   text-decoration: none;
