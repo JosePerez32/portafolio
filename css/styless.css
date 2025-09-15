@@ -143,14 +143,18 @@ body {
   transition: background-color 0.3s ease;
 }
 .hero-section {
-  background-color: #444242;
+  background-color: #1E1E1E;
   padding: 60px 40px;
   border-radius: 20px;
   margin-top: 60px;
 }
 .hero-image img {
-  max-width: 300px;
+  width: 620px;      /* O el tamaño que prefieras */
+  height: auto;
   border-radius: 15px;
+  /* box-shadow: 0 4px 24px rgba(0,0,0,0.15); */
+  position: relative;
+  z-index: 1;
 }
 .hero {
   display: flex;
@@ -165,24 +169,30 @@ h1, h2, h3 {
   margin-bottom: 15px;
   color: #ffffff;
 }
+
+.hero {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.hero-text {
+  margin-right: -60px;   /* Ajusta este valor para que el texto se encime más o menos */
+  z-index: 2;
+  position: relative;
+  background: transparent;
+}
 .hero-text {
   /* Opcional: ajusta el ancho si lo deseas */
   max-width: 400px;
-}
-
-.hero-image img {
-  width: 180px; /* Ajusta el tamaño de la imagen si es necesario */
-  border-radius: 0%; /* Opcional: hace la imagen circular */
-  /*box-shadow: 0 2px 8px rgb(255, 255, 255); /* Opcional: sombra suave */
 }
 .contact-button:hover {
   background-color: #e0ac29;
 }
 .about {
   margin: 30px auto 0; /* 30px arriba, centrado horizontalmente */
-
   width: 70% ;
-  max-width: 800px; /* Opcional: establece un ancho máximo para mejor lectura */
+  max-width: 1000px; /* Opcional: establece un ancho máximo para mejor lectura */
   text-align: center;
 }
 /* .about-title {
@@ -245,7 +255,7 @@ h1, h2, h3 {
   font-weight: 400;
   line-height: 1.7;
   letter-spacing: 0.2px;
-  color: #ffffff;
+  color: #fdfdfd;
 }
 .about h2 {
   font-size: 2em;
@@ -324,8 +334,8 @@ h1, h2, h3 {
   grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); /* Cambio clave */
   gap: 15px;
   justify-content: center;      /* Centra las columnas incompletas */
-  max-width: 900px;             /* Ajusta el ancho máximo según tu diseño */
-  margin: 0 auto;
+  max-width: 1000px;             /* Ajusta el ancho máximo según tu diseño */
+  margin: 0 auto;      
 }
 /* ...existing code... */
 footer {
