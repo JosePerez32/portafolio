@@ -12,7 +12,7 @@ body {
   color: #ffffff;
   line-height: 1.6;
   font-size: 16px;
-  padding: 20px;
+  padding: 5px;
 }
 .logo {
   padding: 0 10px; /* Espacio interno a ambos lados */
@@ -31,6 +31,7 @@ body {
   );
   padding: 5px 0px;
   border-radius: 10px;
+  margin-top: 0; /* O usa un valor pequeño, por ejemplo: 8px */
 }
 
 .nav-links {
@@ -42,7 +43,7 @@ body {
 
 .nav-links {
   display: flex;
-  gap: 50px;
+  gap: 0px;
   list-style: none;
   align-items: center;
 }
@@ -63,22 +64,28 @@ body {
   box-shadow: 0 2px 8px rgba(245, 194, 66, 0.15);
   outline: none;
 } */
- .nav-links a {
+.nav-links a {
   font-family: 'Helvetica', 'Arial', sans-serif;
   font-weight: 150;
   letter-spacing: 1px;
   font-size: 1.2rem;
   color: #ece468;
-  background: #25251f;
+  background: #2b2b2b 15%;
   text-decoration: none;
-  padding: 18px 36px;
+  padding: 18px 40px;
   border-radius: 3px;
-  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  border-left: 2px solid #f5c242;   /* Contorno amarillo solo a la izquierda */
+  border-right: 2px solid #f5c242;  /* Contorno amarillo solo a la derecha */
+  border-top: none;
+  border-bottom: none;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, border-color 0.2s;
 }
+
 .nav-links a:hover,
 .nav-links a:focus {
   background: #f5c242;
   color: #232323;
+  border-color: gold; /* Más brillante al pasar el mouse */
   box-shadow: 0 2px 8px rgba(245, 194, 66, 0.15);
   outline: none;
 }
