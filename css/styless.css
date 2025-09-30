@@ -590,7 +590,7 @@ footer {
 }
 
 /* ...existing code... */
-.download-cv-button {
+/* .download-cv-button {
   display: inline-block;
   padding: 12px 24px;
   background: linear-gradient(90deg, #f5c242 60%, gold 100%);
@@ -604,12 +604,12 @@ footer {
   transition: background 0.2s, transform 0.2s;
   margin-left: 20px;
   cursor: pointer;
-}
-.download-cv-button:hover {
+} */
+/* .download-cv-button:hover {
   background: linear-gradient(90deg, gold 60%, #f5c242 100%);
   transform: translateY(-2px) scale(1.04);
   color: #1f1f1f;
-}
+} */
 /* ...existing code... */
 .timeline-line {
   grid-column: 2;

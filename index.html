@@ -30,7 +30,13 @@
         <li><a href="#languages" class="languages-button" >Languages</a></li>
         <li><a href="#contact" class="contacti-button" >Contact</a></li>
       </ul>
-      <a href="elements/Jose Perez 2025 - CV(EN).pdf" class="download-cv-button" download>Download CV</a>
+      <div class="download-cv-dropdown">
+        <button class="download-cv-button">Download CV <i class="fas fa-chevron-down"></i></button>
+        <div class="dropdown-content">
+          <a href="elements/Jose Perez 2025 - CV(EN).pdf" download>CV - (EN)</a>
+          <a href="elements/Jose Perez 2025 - CV(NL).pdf" download>CV - (NL)</a>
+        </div>
+      </div>
     </nav>
   </header>
 
@@ -350,7 +356,6 @@
   </button>
   <script src="js/index.js"></script>
   <script src="js/scrollAnimation.js"></script>
-  <script src="js/buttonScroll.js"></script>
 
 </body>
 </html>
