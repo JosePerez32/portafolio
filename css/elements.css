@@ -173,3 +173,44 @@
   z-index: 1003; /* Z-index más alto para los enlaces */
  /* cursor: pointer;
 } */
+/* === Banner "En renovación" === */
+.renovacion-banner {
+  position: fixed;
+  top: 30px;
+  left: -40px;
+  background-color: #ff3b3b;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+  padding: 10px 100px;
+  transform: rotate(-45deg);
+  transform-origin: top left;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  animation: wave 2.5s ease-in-out infinite;
+}
+
+/* Animación de ondeo */
+@keyframes wave {
+  0%, 100% {
+    transform: rotate(-45deg) translateY(0);
+  }
+  50% {
+    transform: rotate(-45deg) translateY(4px);
+  }
+}
+
+/* Efecto sutil de sombra "al viento" */
+.renovacion-banner span {
+  display: inline-block;
+  animation: shadowPulse 2s ease-in-out infinite;
+}
+
+@keyframes shadowPulse {
+  0%, 100% {
+    text-shadow: 0 0 2px #ffbaba;
+  }
+  50% {
+    text-shadow: 0 0 8px #ffbaba;
+  }
+}
