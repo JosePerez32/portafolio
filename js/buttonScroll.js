@@ -1,10 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
   // Scroll to top button
   const scrollBtn = document.getElementById('scrollToTopBtn');
+  const sections = document.querySelectorAll('section'); // Cambiar el color del scroll button según la sección
+
   if (scrollBtn) {
     window.addEventListener('scroll', () => {
       if (window.scrollY > 200) {
         scrollBtn.classList.add('show');
+        scrollBtn.style.display = 'block';
       } else {
         scrollBtn.classList.remove('show');
       }
@@ -14,7 +17,24 @@ document.addEventListener('DOMContentLoaded', function() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
-
+  // Observador de intersección para cambiar el color del botón según la sección
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Cambiar color basado en la sección
+        if (entry.target.id === 'portfolio') {
+          scrollBtn.style.backgroundColor = '#65b8e8'; // Azul para portfolio
+        } else if (entry.target.id === 'experience') {
+          scrollBtn.style.backgroundColor = '#f5c242'; // Dorado para experience
+        } else {
+          scrollBtn.style.backgroundColor = '#defaultColor'; // Color por defecto
+        }
+      }
+    });
+  }, { threshold: 0.5 });
+  // Fin de observador de intersección
+  // Observar todas las secciones
+sections.forEach(section => observer.observe(section));
   // CV Dropdown functionality
   const cvDropdown = document.querySelector('.download-cv-dropdown');
   const cvButton = document.querySelector('.download-cv-button');

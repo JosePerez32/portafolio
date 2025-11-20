@@ -10,10 +10,66 @@
 .academic-title {
   text-align: center;
   font-size: 2rem;
-  color: #f5c242;
+  color: #2d76e2;
   margin-bottom: 40px;
 }
-
+/* .timeline-dot-academic {
+  position: absolute;
+  left: -40px;
+  top: 5px;
+  transform: translateX(-50%);
+  width: 18px;
+  height: 18px;
+  background-color: #46a0e9;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #126094, 0 0 20px #2a28c066;
+  z-index: 1;
+  animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(21, 199, 253, 0.7), 0 0 10px #42c2f5, 0 0 20px #30316366;
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(245, 194, 66, 0), 0 0 10px #42c2f5, 0 0 20px #30316366;
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(194, 66, 245, 0.7), 0 0 10px #42c2f5, 0 0 20px #30316366;
+  }
+} */
+.timeline-dot-academic {
+  position: absolute;
+  left: 441px;
+  top: 5px;
+  transform: translateX(0%);
+  width: 18px;
+  height: 18px;
+  background-color: #65b8e8; /* Azul en lugar de dorado */
+  border-radius: 50%;
+  box-shadow: 0 0 10px #65b8e8, 0 0 20px #65b8e866; /* Azul */
+  z-index: 1;
+  animation: pulse-academic 1.5s infinite; /* Animación renombrada */
+}
+.uno {
+  top: 140px;
+}
+.dos {
+  top: 260px;
+}
+.tres {
+  top: 570px;
+}
+@keyframes pulse-academic {
+  0% {
+    box-shadow: 0 0 0 0 rgba(101, 184, 232, 0.7), 0 0 10px #65b8e8, 0 0 20px #65b8e866;
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(101, 184, 232, 0), 0 0 10px #65b8e8, 0 0 20px #65b8e866;
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(101, 184, 232, 0.7), 0 0 10px #65b8e8, 0 0 20px #65b8e866;
+  }
+}
 .academic-timeline {
   position: relative;
   max-width: 900px;
@@ -27,7 +83,7 @@
   transform: translateX(-50%);
   width: 2px;
   height: 100%;
-  background: #f5c24255;
+  background: #42f5f555;
   z-index: 0;
 }
 /* Ajusta los items para que estén alineados justo a la derecha de la línea */
@@ -44,7 +100,7 @@
   position: relative;
   left: calc(38% + 10px); /* Año a la derecha del punto */
   top: 50%;
-  color: #f5c242;
+  color: #00defc;
   font-weight: bold;
 }
 /* .timeline-item.left .timeline-year {
@@ -62,8 +118,8 @@
   position: relative;
   /* top: 5px; */
    width: 100px;
-    padding-right: 30px; 
-  color: #f5c242;
+  padding-right: 30px; 
+  color: #3386e4;
   font-weight: bold;
   font-size: 0.9rem;
   white-space: nowrap;
@@ -116,7 +172,7 @@
   position: absolute;
   right: calc(100% + 25px);
   top: 300px;
-  color: #f5c242;
+  color: #4fc7ff;
   font-weight: bold;
 }
 .academic-section .timeline-item.right {
@@ -134,7 +190,7 @@
   position: relative;
   left: calc(60% + 205px);
   top: 1px;/* La altura del año */
-  color: #f5c242;
+  color: #3386e4;
   font-weight: bold;
 }
 .academic-timeline .timeline-item:nth-child(3).timeline-item.timeline-item.right .timeline-year {

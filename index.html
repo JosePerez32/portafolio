@@ -2,12 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="elements/artificial-intelligence.svg.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Hello! I'm José Pérez - Full Stack Developer.</title>
   <link rel="stylesheet" href="./css/styless.css" />
   <link rel="stylesheet" href="./css/academic.css" />
   <link rel="stylesheet" href="./css/experience.css" />
   <link rel="stylesheet" href="./css/elements.css" />
+  <link rel="stylesheet" href="./css/portfolio.css" />
   <script src="./js/scrollreveal.js"></script>
   <script src="./js/scrollAnimation.js"></script>
   <script src="./js/buttonScroll.js"></script>
@@ -23,29 +25,21 @@
     <nav class="navbar">
       <div class="logo"><img src="./elements/jp.png" alt="José Pérez Logo" style="border-radius: 10px; padding-left:10px; height:50px; width:auto; "></div>
       <ul class="nav-links">
-        <li><a href="#skills" class="skills-button" >Skills</a></li>
         <li><a href="#portfolio" class="portfolio-button" >Portfolio</a></li>
+        <li><a href="#skills" class="skills-button" >Skills</a></li>
+        
         <li><a href="#experience" class="experience-button" >Experience</a></li>
         <li><a href="#academic" class="academic-button" >Academic Training</a></li>
         <li><a href="#languages" class="languages-button" >Languages</a></li>
         <li><a href="#contact" class="contacti-button" >Contact</a></li>
       </ul>
-      <!-- New links -->
-      <a href="proyectos/todo-app/index.html" target="_blank" class="project-link">
-          Ver Proyecto Task Manager
-      </a>
-      <a href="proyectos/weather/index.html" target="_blank" class="project-link">
-          Ver Proyecto Weather
-      </a>
-      <a href="proyectos/movies-app/index.html" target="_blank" class="project-link">
-          Ver Proyecto Movies
-      </a>
+
       <div class="download-cv-dropdown">
-        <button class="download-cv-button">Download CV <i class="fas fa-chevron-down"></i></button>
+        <!-- <button class="download-cv-button">Download CV <i class="fas fa-chevron-down"></i></button>
         <div class="dropdown-content">
           <a href="elements/Jose Perez 2025 - CV(EN).pdf" download>CV - (EN)</a>
           <a href="elements/Jose Perez 2025 - CV(NL).pdf" download>CV - (NL)</a>
-        </div>
+        </div> -->
       </div>
     </nav>
   </header>
@@ -87,8 +81,199 @@
     </p>
   </section>
 
+  <section class="portfolio-section" id="portfolio">
+    <h2 class="portfolio-title" data-animate>Portfolio</h2>
+    <div class="portfolio-grid">
+      <!-- Proyecto 1 -->
+      <div class="portfolio-card">
+        <div class="card-inner">
+            <img src="elements/ig1.png" alt="Descripción" class="image-card">
+            <div class="card-front zoom-wrapper">
+              <span class="highlight"><h1 class="text-cards">Verb Flashcards</h1></span>
+            </div>
+          <!-- Voltear tarjeta al hacer clic -->
+          <div class="card-back">
+            <h3>Verb Flashcard</h3>
+            <p>This is a small flashcard project to help me improve my English vocabulary through images, since I have a visual memory. The most important part here is the implementation: connecting a <span class="port-highlight">  Vercel-hosted page with a NoSQL database (Firebase).  </span>
+            <button class="ver-cards-btn" onclick="window.open('https://cards-mu-one-52.vercel.app/', '_blank')">
+              More Info
+            </button></p>
+          </div>
+        </div>
+      </div>
+      <!-- Proyecto 2 -->
+      <div class="portfolio-card">
+        <div class="card-inner">
+          <img src="elements/ig2.png" alt="Descripción" class="image-card">
+          <div class="card-front zoom-wrapper">
+            <!-- <img src="" alt="Project 2"> -->
+            <h1 class="text-cards">Database Workload Simulation</h1>
+          </div>
+        <div class="card-back">
+            <h3>Database Workload</h3>
+            <p>In a previous job, I worked on connecting several <span class="port-highlight">Python scripts with five DB2 databases</span> located on two different servers. The goal was to run tests for a web application that monitored workload performance.</p>
+            <button class="ver-cards-btn wl" onclick="window.open('https://github.com/JosePerez32/docsNucs/blob/master/workload.py', '_blank')">
+              More Info
+            </button></p>
+        </div>
+      </div>
+    </div>
+
+      <!-- Proyecto 3 -->
+      <div class="portfolio-card">
+        <div class="card-inner">
+          <img src="elements/ig3.png" alt="Descripción" class="image-card">
+          <div class="card-front zoom-wrapper">
+            <!-- <img src="" alt="Project 3"> -->
+             <h1 class="text-cards">Trading Assistant</h1>
+          </div>
+          <div class="card-back">
+            <h3>Trading Assistant</h3>
+            <p>This is another application I am still developing. The plan is to use it to better manage my cryptocurrency wallet and assist me in making smarter financial trading decisions.</p>
+            <button class="ver-cards-btn" onclick="window.open('https://cards-mu-one-52.vercel.app/', '_blank')">
+              More Info
+            </button></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Proyecto 4 -->
+      <div class="portfolio-card">
+        
+        <div class="card-inner">
+          <div class="card-front zoom-wrapper">
+            <h1 class="text-cards">Movie Finder</h1>
+            
+            </div>
+            <img src="elements/ig9.png" alt="Descripción" class="image-card">
+            
+              <!-- <img src="" alt="Project 1"> -->
+            
+          <!-- Voltear tarjeta al hacer clic -->
+          <div class="card-back">
+            <h1 class="text-cards">Movie Finder</h1>
+            <p>  Film search engine developed with <span class="port-highlight">React</span> 
+              that leverages a <span class="port-highlight">free API</span> to retrieve 
+              comprehensive movie data. Users can search for any film and access details 
+              like plot summary, cast, release year, ratings, and runtime.</p>
+            <button class="ver-cards-btn" onclick="window.open('proyectos/movies-app/index.html', '_blank')">
+              More Info
+            </button></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Proyecto 5 -->
+      <div class="portfolio-card">
+        <div class="card-inner">
+          <img src="elements/ig5.png" alt="Descripción" class="image-card">
+          <div class="card-front zoom-wrapper">
+            
+            <!-- <img src="" alt="Project 5"> -->
+            <h1 class="text-cards">Database Monitoring</h1>
+          </div>
+          <div class="card-back">
+            <h3>Database Monitoring</h3>
+            <p>In my last job, I developed the frontend of a <span class="port-highlight">web application called Infocare. Based on data from an API</span>, I was responsible for rendering charts as well as implementing other features such as generating informative PDFs, user management, and more.</p>
+            <button class="ver-cards-btn" onclick="window.open('https://github.com/JosePerez32/infocare_test', '_blank')">
+              More Info
+            </button></p>
+          </div>
+        </div>
+      </div>
+      <!-- Proyecto 6 -->
+      <div class="portfolio-card">
+        <div class="card-inner">
+          <img src="elements/ig6.png" alt="Descripción" class="image-card">
+          <div class="card-front zoom-wrapper">
+            <!-- <img src="" alt="Project 6"> -->
+            <h1 class="text-cards">Flight Price Scraper</h1>
+          </div>
+          <div class="card-back">
+            <h3>Flight Price Scraper</h3>
+            <p>Additionally, I built a simple script a <span class="port-highlight">web scraper for Skyscanner</span> that monitors daily flights between two different locations. It finds the lowest price each day, saves the data into a CSV file.</p>
+            <button class="ver-cards-btn" onclick="window.open('https://cards-mu-one-52.vercel.app/', '_blank')">
+              More Info
+            </button></p>
+          </div>
+        </div>
+      </div>
+      <!-- Proyecto 7 -->
+      <div class="portfolio-card">
+        <div class="card-inner">
+            <img src="elements/ig7.png" alt="Descripción" class="image-card">
+            <div class="card-front zoom-wrapper">
+              <!-- <img src="" alt="Project 1"> -->
+               
+                <h1 class="text-cards">Task Manager</h1>
+            </div>
+          <!-- Voltear tarjeta al hacer clic -->
+          <div class="card-back">
+            <h3>TaskFlow Manager</h3>
+             <p>
+                <span class="port-highlight">Task management</span> application built with 
+                <span class="port-highlight">React</span> and 
+                <span class="port-highlight">Vite</span>. Allows creating tasks and organizing them 
+                across three status columns: <span class="port-highlight">"To Do"</span>, 
+                <span class="port-highlight">"In Progress"</span>, and 
+                <span class="port-highlight">"Done"</span>, providing visual workflow tracking 
+                and drag-and-drop functionality.
+              </p>
+            <button class="ver-cards-btn" onclick="window.open('proyectos/todo-app/index.html', '_blank')">
+              More Info
+            </button></p>
+          </div>
+        </div>
+      </div>
+      <!-- Proyecto 8 -->
+      <div class="portfolio-card">
+        <div class="card-inner">
+          <img src="elements/ig8.png" alt="Descripción" class="image-card">
+            <div class="card-front zoom-wrapper">
+              <h1 class="text-cards">Weather Insight</h1>
+              <!-- <img src="" alt="Project 1"> -->
+            </div>
+          <!-- Voltear tarjeta al hacer clic -->
+          <div class="card-back">
+            <h3>Weather Insight</h3>
+              <p>
+                <span class="port-highlight">React</span> application that fetches real-time 
+                weather data using a <span class="port-highlight">public API</span>. 
+                Displays detailed information including temperature, humidity, wind speed, 
+                and atmospheric conditions for any city worldwide.
+              </p>
+            <button class="ver-cards-btn" onclick="window.open('proyectos/weather/index.html', '_blank')">
+              More Info
+            </button></p>
+          </div>
+        </div>
+      </div>
+      <!-- Proyecto 9 -->
+           <div class="portfolio-card">
+        <div class="card-inner">
+          <img src="elements/ig4.png" alt="Descripción" class="image-card">
+          <div class="card-front zoom-wrapper">
+            <!-- <img src="" alt="Project 4"> -->
+            <h1 class="text-cards">Cheap Smart Refrigerator</h1>
+          </div>
+          <div class="card-back">
+            <h3>Cheap Smart Refrigerator</h3>
+            <p>I am also passionate about electronics and home automation. Currently, I am developing a system to convert a conventional refrigerator into a smart one, due to the high cost of commercial smart fridges.</p>
+            <button class="ver-cards-btn" onclick="window.open('https://cards-mu-one-52.vercel.app/', '_blank')">
+              More Info
+            </button></p>
+          </div>
+        </div>
+      </div>
+      
+            <!-- Proyecto 10 -->
+  
+    </div>
+  </section>
+
+
   <section class="skills" id="skills" data-animate>
-    <h2 class="skills-title">My Principal Skills</h2>
+    <h2 class="skills-title">Principal Skills</h2>
     <div class="skills-grid">
       <div class="skill-box">
         <div class="skill-name">JavaScript</div>
@@ -122,6 +307,9 @@
         <div class="skill-name"> .NET</div>
         <i class="fab fa-microsoft skill-icon"></i>
       </div>
+      <div class="skill-box vacio">
+
+      </div>
       <div class="skill-box">
         <div class="skill-name" title="OpenShift / Docker Swarm / Kubernetes">Containers and orchestration.</div>
         <i class="fab fa-docker skill-icon"></i>
@@ -132,87 +320,8 @@
       </div>
     </div>
   </section>
-  <section class="portfolio-section" id="portfolio">
-    <h2 class="portfolio-title" data-animate>Portfolio</h2>
-    <div class="portfolio-grid">
-      <!-- Proyecto 1 -->
-      <div class="portfolio-card">
-        <div class="card-inner">
-            <div class="card-front zoom-wrapper">
-              <img src="./elements/img1.png" alt="Project 1">
-            </div>
-          <!-- Voltear tarjeta al hacer clic -->
-          <div class="card-back">
-            <h3>Verb Flashcard</h3>
-            <p>This is a small flashcard project to help me improve my English vocabulary through images, since I have a visual memory. The most important part here is the implementation: connecting a Vercel-hosted page with a NoSQL database (Firebase).</p>
-          </div>
-        </div>
-      </div>
-      <!-- Proyecto 2 -->
-      <div class="portfolio-card">
-        <div class="card-inner">
-          <div class="card-front zoom-wrapper">
-            <img src="./elements/img2.png" alt="Project 2">
-          </div>
-          <div class="card-back">
-            <h3>Database Workload Simulation</h3>
-            <p>In a previous job, I worked on connecting several Python scripts with five DB2 databases located on two different servers. The goal was to run tests for a web application that monitored workload performance.</p>
-          </div>
-        </div>
-      </div>
 
-      <!-- Proyecto 3 -->
-      <div class="portfolio-card">
-        <div class="card-inner">
-          <div class="card-front zoom-wrapper">
-            <img src="./elements/img3.png" alt="Project 3">
-          </div>
-          <div class="card-back">
-            <h3>Trading Assistant</h3>
-            <p>This is another application I am still developing. The plan is to use it to better manage my cryptocurrency wallet and assist me in making smarter financial trading decisions.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Proyecto 4 -->
-      <div class="portfolio-card">
-        <div class="card-inner">
-          <div class="card-front zoom-wrapper">
-            <img src="./elements/img4.png" alt="Project 4">
-          </div>
-          <div class="card-back">
-            <h3>Cheap Smart Refrigerator</h3>
-            <p>I am also passionate about electronics and home automation. Currently, I am developing a system to convert a conventional refrigerator into a smart one, due to the high cost of commercial smart fridges.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Proyecto 5 -->
-      <div class="portfolio-card">
-        <div class="card-inner">
-          <div class="card-front zoom-wrapper">
-            <img src="./elements/img5.png" alt="Project 5">
-          </div>
-          <div class="card-back">
-            <h3>Database Monitoring</h3>
-            <p>In my last job, my final project was developing the frontend of a web application called Infocare. Based on data from an API, I was responsible for rendering charts as well as implementing other features such as generating informative PDFs, user management, and more.</p>
-          </div>
-        </div>
-      </div>
-      <!-- Proyecto 6 -->
-      <div class="portfolio-card">
-        <div class="card-inner">
-          <div class="card-front zoom-wrapper">
-            <img src="./elements/img6.png" alt="Project 6">
-          </div>
-          <div class="card-back">
-            <h3>Flight Price Scraper</h3>
-            <p>Additionally, I built a simple script — a web scraper for Skyscanner — that monitors daily flights between two different locations. It finds the lowest price each day, saves the data into a CSV file, and identifies patterns that I can use to replicate later on.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  
 
   <section class="experience-section" id="experience" data-animate>
     <h2 class="experience-title">Experience</h2>
@@ -256,7 +365,7 @@
     <div class="academic-timeline">
       <!-- ITEM 1 (izquierda) -->
       <div class="timeline-item right">
-        <div class="timeline-dot"></div>
+        <div class="timeline-dot-academic"></div>
         <div class="timeline-year">2024</div>
         <div class="timeline-content">
           <h3 class="timeline-role">Container Orchestration with OpenShift</h3>
@@ -267,7 +376,7 @@
       </div>
       <!-- ITEM 2 (derecha) -->
       <div class="timeline-item left">
-        <div class="timeline-dot"></div>
+        <div class="timeline-dot-academic uno"></div>  
         <div class="timeline-year">2021</div>
         <div class="timeline-content">
           <h3 class="timeline-role">.NET Development with C#</h3>
@@ -278,7 +387,7 @@
       </div>
       <!-- ITEM 3 (izquierda) -->
       <div class="timeline-item right">
-        <div class="timeline-dot"></div>
+        <div class="timeline-dot-academic dos"></div>
         <div class="timeline-year">2010 - 2015</div>
         <div class="timeline-content">
           <h3 class="timeline-role">Bachelor’s Degree in Intelligent Systems Engineering</h3>
@@ -290,7 +399,7 @@
       </div>
       <!-- ITEM 4 (derecha) -->
       <div class="timeline-item left">
-        <div class="timeline-dot"></div>
+        <div class="timeline-dot-academic tres"></div>
         <div class="timeline-year">2006 - 2009</div>
         <div class="timeline-content">
           <h3 class="timeline-role">Technical Degree in Computer Science</h3>

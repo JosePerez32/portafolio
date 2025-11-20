@@ -24,10 +24,10 @@ body {
   align-items: center;
   background: linear-gradient(
     to right,
-    #131212 0px,
-    #181717 200px,
-    #2b2b2b 15%,
-    #2b2b2b 100%
+    #010101 0px,
+    #020202 200px,
+    #000000 15%,
+    #070608 100%
   );
   padding: 5px 0px;
   border-radius: 10px;
@@ -69,13 +69,13 @@ body {
   font-weight: 150;
   letter-spacing: 1px;
   font-size: 1.2rem;
-  color: #ece468;
-  background: #2b2b2b 15%;
+  color: #0366fa;
+  background: #030303 15%;
   text-decoration: none;
   padding: 18px 40px;
   border-radius: 3px;
-  border-left: 2px solid #f5c242;   /* Contorno amarillo solo a la izquierda */
-  border-right: 2px solid #f5c242;  /* Contorno amarillo solo a la derecha */
+  border-left: 2px solid #f5c24279;   /* Contorno amarillo solo a la izquierda */
+  border-right: 2px solid #f5c24210;  /* Contorno amarillo solo a la derecha */
   border-top: none;
   border-bottom: none;
   transition: background 0.2s, color 0.2s, box-shadow 0.2s, border-color 0.2s;
@@ -83,9 +83,9 @@ body {
 
 .nav-links a:hover,
 .nav-links a:focus {
-  background: #f5c242;
-  color: #232323;
-  border-color: gold; /* Más brillante al pasar el mouse */
+  background: #438cec3f;
+  color: #2fd9ff;
+  border-color: rgb(21, 21, 23); /* Más brillante al pasar el mouse */
   box-shadow: 0 2px 8px rgba(245, 194, 66, 0.15);
   outline: none;
 }
@@ -136,7 +136,16 @@ body {
   position: relative;
   display: inline-block;
 }
-
+.port-highlight {
+  color: #65b8e8; /* Azul que coincide con el tema del portafolio */
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+}
+.port-highlight:hover {
+  text-shadow: 0 0 8px rgba(66, 138, 245, 0.4);
+  cursor: default;
+}
 /* Efecto opcional al pasar el mouse */
 .highlight:hover {
   text-shadow: 0 0 8px rgba(245, 194, 66, 0.4);
@@ -182,7 +191,16 @@ h1, h2, h3 {
   margin-bottom: 15px;
   color: #ffffff;
 }
-
+.text-cards{
+  color: #2aaed6e8;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 0 10px;
+}
+.text-cards .highlight {
+  color: #4c94ffb4; /* azulito */
+}
 .hero {
   display: flex;
   align-items: center;
@@ -203,7 +221,7 @@ h1, h2, h3 {
   background-color: #e0ac29;
 }
 .about {
-  margin: 30px auto 0; /* 30px arriba, centrado horizontalmente */
+  margin: 15px auto 0; /* 30px arriba, centrado horizontalmente */
   width: 70% ;
   max-width: 1000px; /* Opcional: establece un ancho máximo para mejor lectura */
   text-align: center;
@@ -215,7 +233,7 @@ h1, h2, h3 {
   margin-bottom: 40px;
 
 } */
- .about-title {
+.about-title {
   font-family: 'Times New Roman', Times, serif;
   font-weight: 700;
   font-size: 2.5rem;
@@ -308,7 +326,6 @@ h1, h2, h3 {
   justify-content: center;
   padding: 16px 15px; /* Ajusta el padding para mejor espaciado */
 }
-
 .skill-name {
   margin-bottom: 8px; /* Espacio entre texto e icono */
   font-size: 1rem; /* Ajusta según necesites */
@@ -324,18 +341,18 @@ h1, h2, h3 {
   font-size: 3.5em;
   vertical-align: middle;
 }
-.skills-title {
+.portfolio-title, .skills-title {
   text-align: center;
   font-size: 0.2rem;
   font-weight: 200;
   color: #f5c242;
   margin-bottom: 40px;
 }
-.skill-box:hover {
+.skill-box:not(.vacio):hover {
   color: gold;
   border-color: gold;
-  box-shadow: 0 0 16px 4px rgba(255, 255, 255, 0.5);
-  background: #ffd609d5;
+  box-shadow: 0 0 16px 4px rgba(247, 243, 3, 0.5);
+  background: #ffd71105; 
 }
 .skills h2 {
   font-size: 2.5em;
@@ -368,12 +385,17 @@ footer {
 .contact-section {
   max-width: 500px;
   margin: 0 auto;
-  text-align: center;
+  background: none;
+  /* text-align: center; */
 }
-
+.contact-section ::selection{
+  background: #2336b2;
+  color: #11f4fb;
+}
 .contact-section h2 {
-  color: #f5c242;
+  color: #2d76e2;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .contact-form {
@@ -395,27 +417,39 @@ footer {
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  outline: 2px solid #f5c242;
+  outline: 2px solid #2d76e2;
 }
 
 .contact-form button {
-  background: #f5c242;
-  color: #232323;
-  border: none;
+  background: linear-gradient(135deg, #3b80db 0%, #2a65b8 100%);
+  color: white;
   border-radius: 6px;
   padding: 12px;
   font-weight: bold;
   cursor: pointer;
-  transition: background 0.2s;
+  border: 2px solid rgba(59, 128, 219, 0.3);
+  box-shadow: 0 4px 15px rgba(59, 128, 219, 0.4);
+  transition: all 0.3s ease;
+  margin-top: 15px;
+  position: relative;
+  overflow: hidden;
+}
+.contact-form button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(59, 128, 219, 0.4);
 }
 
 .contact-form button:hover {
-  background: gold;
+  background: linear-gradient(135deg, #2a65b8 0%, #1e4a8c 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(59, 128, 219, 0.6);
+  border-color: rgba(59, 128, 219, 0.6);
 }
+
 .contact-form label {
   display: block;
   margin-bottom: 5px;
-  color: #f5c242;
+  color: #2d76e2;
   font-weight: 500;
   text-align: left;
   margin-top: 10px;
@@ -425,6 +459,12 @@ footer {
   background: #ffe066;   /* Amarillo suave */
   color: #232323;        /* Texto oscuro para contraste */
 }
+.portfolio-section ::selection, 
+.academic-section ::selection  {
+  background: #65b8e8;   /* Azul suave */
+  color: #1e1e1e;        /* Texto oscuro para contraste */
+}
+
 /* Contenedor general alineado al lado derecho de la imagen */
 .vertical-line-container {
   display: flex;
@@ -493,8 +533,8 @@ footer {
 }
 /* === Portfolio Section === */
 .portfolio-section {
-  background-color: #242424;
-  padding: 60px 40px;
+  background-color: #151515;
+  padding: 90px 40px;
   border-radius: 20px;
   margin-top: 60px;
 }
@@ -502,15 +542,23 @@ footer {
 .portfolio-title {
   text-align: center;
   font-size: 2rem;
-  color: #f5c242;
-  margin-bottom: 40px;
-
+  color: #65b8e8;
 }
-
+.portfolio-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #65b8e8, #00ffea);
+  border-radius: 2px;
+}
 /* Grid */
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Fuerza 3 columnas */
+  grid-template-columns: repeat(5, 1fr); /* Controla el número de columnas en la seccion de portafolio */
   gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
@@ -518,7 +566,8 @@ footer {
 
 /* Card styles */
 .portfolio-card {
-  perspective: 1000px;
+  
+  perspective: 100%;
 }
 /* .portfolio-card:hover {
   transform: translateY(-5px);
@@ -527,13 +576,26 @@ footer {
 } */
 .card-inner {
   position: relative;
-  width: 90%;
-  height: 300px;
+  width: 190px;
+  height: 280px;
   transition: transform 0.8s;
   transform-style: preserve-3d;
+  border-radius: 20px ;
+  /* color: #2A7FFF;
+  border-color: #2A7FFF; */
+  box-shadow: 0 0 16px 4px #11a6eb;
   cursor: pointer;
-  object-fit: fill; /* Ajusta la imagen manteniendo relación de aspecto */
+   /* Ajusta la imagen manteniendo relación de aspecto */
+   background-color: #0a0a0b;
   object-position: center; /* Enfoca el centro de la imagen (opcional) */
+}
+
+/* Porfolio Effects */
+.card-inner:hover {
+  box-shadow: 0 0 30px 10px #26caf381;
+}
+.card-inner:hover::before {
+  left: 100%;
 }
 
 /* .portfolio-card:hover .card-inner {
@@ -554,8 +616,27 @@ footer {
   backface-visibility: hidden;
   overflow: hidden;
 }
-.card-front {
+.card-front::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.4s ease;
   z-index: 2;
+}
+.card-front:hover::before {
+  left: 100%;
+  
 }
 .card-front img {
   width: 100%;
@@ -577,16 +658,18 @@ footer {
   align-items: center;
   text-align: center;
 }
-
+.h2 .portfolio-title {
+  padding-top: 20px;
+  margin-top: 20%;
+}
 .card-back h3 {
   margin-bottom: 10px;
-  color: #f5c242;
+  color: #3b80db;
   font-size: 1.2rem;
 }
-
 .card-back p {
-  font-size: 0.95rem;
-  color: #dddddd;
+  font-size: 0.6rem;
+  color: #ebebeb;
 }
 
 /* ...existing code... */
@@ -617,4 +700,15 @@ footer {
   width: 2px;
   height: auto;
   justify-self: center;
+}
+.image-card {
+  width: 70%; /* 70% del ancho del contenedor */
+  height: 50%; /* 70% del alto del contenedor */
+  object-fit: cover; /* Mantiene proporciones y cubre el área */
+  object-position: center; /* Centra la imagen */
+  position: absolute;
+  bottom: 30px; /* 10px del borde inferior */
+  left: 15%; /* Calculado para centrar: (100% - 70%) / 2 = 15% */
+  border-radius: 12px; /* Bordes redondeados ligeramente */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra sutil */
 }
