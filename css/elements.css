@@ -199,7 +199,13 @@
     transform: rotate(-45deg) translateY(4px);
   }
 }
-
+.skill-icon {
+  width: 24px;        /* o el tamaño que usen tus iconos FA */
+  height: 24px;
+  object-fit: contain;/* mantiene proporción sin deformar */
+  font-size: 24px;    /* para los iconos <i> */
+  display: inline-block;
+}
 /* Efecto sutil de sombra "al viento" */
 .renovacion-banner span {
   display: inline-block;

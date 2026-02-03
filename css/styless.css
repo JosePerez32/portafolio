@@ -336,6 +336,12 @@ h1, h2, h3 {
   font-size: 1.8rem; /* Tamaño del icono */
   color: #f5c242; /* Color que coincida con tu tema */
 }
+.skill-box img {
+  width: 1em;      /* se adapta al font-size del padre */
+  height: 1em;
+  object-fit: contain;
+  vertical-align: middle; /* alinea con el texto/iconos */
+}
 .skill-box i {
   margin-right: 8px;
   font-size: 3.5em;
